@@ -1,0 +1,7 @@
+<xenc:EncryptedData xmlns="http://www.w3.org/2001/04/xmlenc#" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Content"
+        Id="<%- blockId %>">
+    <xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+    <xenc:CipherData>
+        <xenc:CipherValue><%- cipherValue %></xenc:CipherValue>
+    </xenc:CipherData>
+</xenc:EncryptedData>

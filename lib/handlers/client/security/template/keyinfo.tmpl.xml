@@ -1,0 +1,21 @@
+<xenc:EncryptedKey xmlns="http://www.w3.org/2001/04/xmlenc#" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#">
+	<xenc:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-1_5"/>
+	<dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+		<wsse:SecurityTokenReference xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="_1fE0bokKmPBVJtZY62MWwg22">
+
+			<wsse:KeyIdentifier xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+					xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+					ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier"
+					EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">
+			   <%- keyHash %>
+			</wsse:KeyIdentifier>
+
+		</wsse:SecurityTokenReference>
+	</dsig:KeyInfo>
+	<xenc:CipherData>
+		<xenc:CipherValue><%- cipherValue %></xenc:CipherValue>
+	</xenc:CipherData>
+	<xenc:ReferenceList>
+		
+	</xenc:ReferenceList>
+</xenc:EncryptedKey>
